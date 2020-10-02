@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tv_event_details_placeholder"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:gravity="center"
+		android:text="@string/loading_data"
+		android:textSize="16sp"
+		android:visibility="gone"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintWidth_percent="0.8" />
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/cl_event_details_data"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:visibility="visible"
+			tools:context=".fragment.DetailsFragment">
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tv_event_details_title"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/default_padding"
+				android:textSize="20sp"
+				android:textStyle="bold"
+				app:layout_constraintEnd_toStartOf="@+id/tv_event_details_image"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				tools:text="Title" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tv_event_details_date"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:paddingLeft="@dimen/default_padding"
+				android:paddingRight="@dimen/default_padding"
+				app:layout_constraintEnd_toStartOf="@+id/tv_event_details_image"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/tv_event_details_title"
+				app:layout_constraintVertical_bias="0"
+				tools:text="Date" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tv_event_details_price"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:paddingLeft="@dimen/default_padding"
+				android:paddingRight="@dimen/default_padding"
+				app:layout_constraintBottom_toTopOf="@+id/tv_event_details_description"
+				app:layout_constraintEnd_toStartOf="@+id/tv_event_details_image"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/tv_event_details_date"
+				app:layout_constraintVertical_bias="0"
+				tools:text="Price" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tv_event_details_description"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/default_padding"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/tv_event_details_image"
+				tools:text="@string/lipsum" />
+
+			<androidx.appcompat.widget.AppCompatImageView
+				android:id="@+id/tv_event_details_image"
+				android:layout_width="0dp"
+				android:layout_height="0dp"
+				android:scaleType="centerCrop"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintDimensionRatio="W,1:1.5"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHorizontal_bias="1.0"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintVertical_bias="0.0"
+				app:layout_constraintWidth_percent="0.5" />
+
+			<FrameLayout
+				android:id="@+id/fl_event_details_map"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				app:layout_constraintDimensionRatio="W,1:2"
+				app:layout_constraintTop_toBottomOf="@+id/tv_event_details_description" />
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/tv_event_details_people_list_title"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:paddingLeft="@dimen/default_padding"
+				android:paddingTop="@dimen/default_padding"
+				android:paddingRight="@dimen/default_padding"
+				android:text="@string/people_checked_in"
+				android:textStyle="bold"
+				app:layout_constraintBottom_toTopOf="@id/rv_event_details_people"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/fl_event_details_map" />
+
+			<androidx.recyclerview.widget.RecyclerView
+				android:id="@+id/rv_event_details_people"
+				android:layout_width="match_parent"
+				android:layout_height="270dp"
+				android:layout_marginBottom="@dimen/default_padding"
+				android:fadingEdge="vertical"
+				android:fadingEdgeLength="10dp"
+				android:orientation="vertical"
+				android:overScrollMode="never"
+				android:requiresFadingEdge="vertical"
+				app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/tv_event_details_people_list_title" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</androidx.core.widget.NestedScrollView>
+
+	<LinearLayout
+		android:id="@+id/ll_loader"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#A000"
+		android:clickable="true"
+		android:focusable="false"
+		android:gravity="center"
+		android:orientation="vertical"
+		android:visibility="gone"
+		tools:ignore="KeyboardInaccessibleWidget">
+
+		<ProgressBar
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:theme="@style/ProgressBarWhiteTheme" />
+
+	</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

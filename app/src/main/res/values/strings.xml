@@ -1,0 +1,32 @@
+<resources>
+	<string name="app_name">Teste Sicredi</string>
+
+<!-- Home screen -->
+	<string name="event_list">Lista de eventos</string>
+	<string name="loading_data">Carregando dados, aguarde…</string>
+	<string name="no_data">Não há dados disponíveis no momento.</string>
+	<string name="refresh">Atualizar lista</string>
+	<string name="data_unavailable">Dado indisponível</string>
+
+<!-- Event details screen -->
+	<string name="event_details">Detalhes do evento</string>
+	<string name="lipsum">Event description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi purus lorem, aliquet non varius eu, efficitur posuere magna. Curabitur commodo, lectus ac scelerisque tincidunt, turpis nibh feugiat massa, ac ultrices est urna sit amet nisi. Aliquam feugiat suscipit quam, facilisis imperdiet ipsum viverra ut. Quisque vehicula ultricies risus. Pellentesque sem diam, sagittis sed tortor pellentesque, tincidunt dapibus quam.</string>
+	<string name="people_checked_in">Quem confirmou presença:</string>
+	<string name="no_people">Ninguém confirmou presença ainda.</string>
+	<string name="error_loading_data">Houve um erro ao tentar carregar os dados. Verifique sua conexão com a internet e tente novamente.</string>
+	<string name="checkin">Realizar check-in</string>
+	<string name="share">Compartilhar evento</string>
+	<string name="string_format_check_event">Confira o evento: %s\n</string>
+	<string name="date">Data: %s\n</string>
+	<string name="price">Preço: %s</string>
+	<string name="address">Endereço: %s</string>
+	<string name="name">Nome</string>
+	<string name="email">E-mail</string>
+	<string name="cancel">Cancelar</string>
+	<string name="confirm">Confirmar</string>
+	<string name="ok">OK</string>
+	<string name="dialog_checkin_empty_fields">Por favor, preencha todos os campos corretamente.</string>
+	<string name="dialog_checkin_error">Houve um erro ao tentar realizar seu check-in. Por favor, verifique sua conexão e tente novamente.</string>
+	<string name="dialog_checkin_success">Check-in realizado com sucesso.</string>
+
+</resources>

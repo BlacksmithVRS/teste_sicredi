@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="@dimen/default_list_item_height_with_icon">
+
+	<androidx.appcompat.widget.AppCompatImageView
+		android:id="@+id/iv_it_event_details_person_image"
+		android:layout_width="0dp"
+		android:layout_height="@dimen/person_icon_size"
+		android:layout_marginStart="@dimen/default_padding"
+		android:layout_marginEnd="@dimen/default_padding"
+		android:scaleType="centerCrop"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@id/tv_it_event_details_person_name"
+		app:layout_constraintDimensionRatio="H,1:1"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:background="#555" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/tv_it_event_details_person_name"
+		android:layout_width="0dp"
+		android:layout_height="match_parent"
+		android:ellipsize="end"
+		android:gravity="center_vertical"
+		android:maxLines="1"
+		android:paddingTop="@dimen/default_padding"
+		android:paddingEnd="@dimen/default_padding"
+		android:paddingBottom="@dimen/default_padding"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/iv_it_event_details_person_image"
+		tools:ignore="RtlSymmetry"
+		tools:text="Person Name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

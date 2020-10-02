@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item android:title="@string/checkin" android:icon="@drawable/ic_check_in" android:id="@+id/menu_event_details_checkin" app:showAsAction="ifRoom"/>
+	<item android:title="@string/share" android:icon="@drawable/ic_share" android:id="@+id/menu_event_details_share" app:showAsAction="ifRoom"/>
+</menu>

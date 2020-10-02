@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="default_padding">16dp</dimen>
+	<dimen name="default_list_item_height_with_icon">58dp</dimen>
+	<dimen name="default_list_item_height_triple">88dp</dimen>
+	<dimen name="person_icon_size">34dp</dimen>
+</resources>
